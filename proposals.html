@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Группа создана, чтобы собирать предложения к&amp;nbsp;стандарту C++, организовывать их&amp;nbsp;внутренние обсуждения, помогать готовить их&amp;nbsp;для отправки в&amp;nbsp;комитет и&amp;nbsp;защищать на&amp;nbsp;общих собраниях в&amp;nbsp;рабочей группе по&amp;nbsp;С++ Международной организации по&amp;nbsp;стандартизации (ISO).">
+    <meta name="author" content="Antony Polukhin and the RG21 community">
+    <title>Рабочая Группа 21 С++, Предложения.</title>
+    <meta property="og:description" content="Группа создана, чтобы собирать предложения к&amp;nbsp;стандарту C++, организовывать их&amp;nbsp;внутренние обсуждения, помогать готовить их&amp;nbsp;для отправки в&amp;nbsp;комитет и&amp;nbsp;защищать на&amp;nbsp;общих собраниях в&amp;nbsp;рабочей группе по&amp;nbsp;С++ Международной организации по&amp;nbsp;стандартизации (ISO)."/>
+    <meta property="og:image" content="assets/logo-ru.svg"/>
+    <link rel="icon" href="assets/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand ml-5" href="./index">
+        <img src="assets/logo-ru.svg" width="180" height="180" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse h4" id="navbarCollapse">
+      <div class="navbar-nav mr-auto">
+          <div class="container mx-5">
+            <div class="row"><div class="col-lg">
+                <a class="nav-item nav-link" href="./index">О проекте</a>
+            </div></div>
+            <div class="row"><div class="col-lg">
+                <a class="nav-item nav-link" href="./en/about">About the project</a>
+            </div></div>
+            <div class="row"><div class="col-lg">
+                <a class="nav-item nav-link" href="./faq">Вопросы и ответы</a>
+            </div></div>
+            <div class="row"><div class="col-lg">
+                <a class="nav-item nav-link" href="./instruction">Инструкция по подготовке предложений</a>
+            </div></div>
+            <div class="row"><div class="col-lg">
+                <a class="nav-item nav-link active" href="#">Предложения</a>
+            </div></div>
+            <div class="row"><div class="col-lg">
+                <a class="nav-item nav-link" href="./news">Новости</a>
+            </div></div>
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+  <div class="container marketing">
+
+    <div class="row featurette">
+      <div class="col-md-12">
+        <h2 class="featurette-heading">Предложения.</h2>
+        <p class="lead">Здесь вы можете найти и обсудить предложения других участников.</p>
+
+      </div>
+    </div>
+      
+    <div class="row featurette">
+      <div class="col-md-4">
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios1" value="&state=open&labels=" onclick="search_proposals();" checked>
+          <label class="form-check-label" for="stateRadios1">Открытые</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios2" value="&state=closed" onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios2">Решенные</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios3" value="&state=open&labels=in_work" onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios3">В работе</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios4" value="&state=all" onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios4">Вce</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios1" value="" onclick="search_proposals();" checked>
+          <label class="form-check-label" for="stateRadios1">Любой стандарт</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios2" value="cpp_17" onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios2">C++17</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios3" value="cpp_20" onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios3">C++20</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios4" value="cpp_23" onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios4">C++23</label>
+        </div>
+      </div>
+    </div>
+    
+    <hr class="featurette-divider">
+
+  </div><!-- /.container -->
+  
+  
+  <div class="container marketing" id='proposals-content'>
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Наверх</a></p>
+    <p>&copy; 2016-2021 РГ 21 C++ Россия &middot; <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement">Политика конфиденциальности</a></p>
+  </footer>
+</main>
+<script src="assets/jquery-3.5.1.min.js"></script>
+<script src="assets/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/showdown.min.js"></script>
+
+<script type="text/javascript">
+
+const GITHUB_API_URL = 'https://api.github.com/repos/boostorg/stacktrace';
+const MARKDOWN_CONVERTER = new showdown.Converter();
+
+function draw_proposals(query) {
+    $.get(GITHUB_API_URL + '/issues?per_page=99' + query, function(data) {
+        const proposals = $('#proposals-content');
+        proposals.empty();
+        
+        let content = ''; 
+        for (const x of data) {
+            likes_id = 'likes_' + x.number;
+            dislikes_id = 'dislikes_' + x.number;
+            
+            proposals.append(
+                '<div class="row featurette"><div class="col-md-12">'
+                + '<h2 class="featurette-heading"><a href="' + x.html_url + '">' + x.title + '</a></h2>'
+                + '<p class="text-muted">Комментариев: ' + x.comments + '<span id="' + likes_id + '"></span><span id="' + dislikes_id + '"></span></p>'
+                + '<p class="lead">' + MARKDOWN_CONVERTER.makeHtml(x.body.split('\n')[0]) + '</p>'
+                + '</div></div>'
+            );
+            /*
+            $.get(GITHUB_API_URL + '/issues/' + x.number + '/reactions?content=+1', function(data_likes) {
+                $(likes_id).text(data_likes);
+            });
+            
+            $.get(GITHUB_API_URL + '/issues/' + x.number + '/reactions?content=-1', function(data_dislikes) {
+                $(dislikes_id).text(data_dislikes);
+            });
+            */
+        }
+    });
+}
+
+function search_proposals() {
+    const query = $('input[name=stateRadios]:checked').val() + $('input[name=cppVersionRadios]:checked').val() + '&q=dbgeng';
+    draw_proposals(query);
+}
+
+$(function() {
+    search_proposals();
+});
+</script>
+
+</body>
+</html>
+
