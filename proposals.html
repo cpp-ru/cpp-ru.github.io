@@ -57,9 +57,16 @@
 
     <div class="row featurette">
       <div class="col-md-12">
-        <h2 class="featurette-heading">Предложения.</h2>
-        <p class="lead">Здесь вы можете найти и обсудить предложения других участников.</p>
+        <h2 class="featurette-heading">Предложения</h2>
+        <p class="lead">Предложения оформляются в виде github issue на <a href="https://github.com/cpp-ru/ideas/issues">https://github.com/cpp-ru/ideas</a>.</p>
+        <p class="lead">Голосуйте за идеи с помощью GitHub Reactions, обсуждайте идеи в комментариях, делитесь своими идеями!</p>
+        <a class="btn btn-primary" href="https://github.com/cpp-ru/ideas/issues/new">Поделиться идеей!</a>
+      </div>
+    </div>
 
+    <div class="row featurette">
+      <div class="col-md-12">
+        <h2 class="featurette-heading">Ниже можно ознакомиться с идеями других участников</h2>
       </div>
     </div>
       
@@ -74,7 +81,11 @@
           <label class="form-check-label" for="stateRadios2">Решенные</label>
         </div>
         <div class="form-check lead">
-          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios3" value="&state=open&labels=in_work" onclick="search_proposals();">
+          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios2" value='&state=closed&labels="Сделано в РГ21"' onclick="search_proposals();">
+          <label class="form-check-label" for="stateRadios2">Решенные в РГ21</label>
+        </div>
+        <div class="form-check lead">
+          <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios3" value='&state=open&labels="В работе"'onclick="search_proposals();">
           <label class="form-check-label" for="stateRadios3">В работе</label>
         </div>
         <div class="form-check lead">
@@ -88,15 +99,15 @@
           <label class="form-check-label" for="stateRadios1">Любой стандарт</label>
         </div>
         <div class="form-check lead">
-          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios2" value="cpp_17" onclick="search_proposals();">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios2" value="C%2B%2B17" onclick="search_proposals();">
           <label class="form-check-label" for="stateRadios2">C++17</label>
         </div>
         <div class="form-check lead">
-          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios3" value="cpp_20" onclick="search_proposals();">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios3" value="C%2B%2B20" onclick="search_proposals();">
           <label class="form-check-label" for="stateRadios3">C++20</label>
         </div>
         <div class="form-check lead">
-          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios4" value="cpp_23" onclick="search_proposals();">
+          <input class="form-check-input" type="radio" name="cppVersionRadios" id="stateRadios4" value="C%2B%2B23" onclick="search_proposals();">
           <label class="form-check-label" for="stateRadios4">C++23</label>
         </div>
       </div>
@@ -123,7 +134,7 @@
 
 <script type="text/javascript">
 
-const GITHUB_API_URL = 'https://api.github.com/repos/boostorg/stacktrace';
+const GITHUB_API_URL = 'https://api.github.com/repos/cpp-ru/ideas';
 const MARKDOWN_CONVERTER = new showdown.Converter();
 
 function draw_proposals(query) {
@@ -140,7 +151,7 @@ function draw_proposals(query) {
                 '<div class="row featurette"><div class="col-md-12">'
                 + '<h2 class="featurette-heading"><a href="' + x.html_url + '">' + x.title + '</a></h2>'
                 + '<p class="text-muted">Комментариев: ' + x.comments + '<span id="' + likes_id + '"></span><span id="' + dislikes_id + '"></span></p>'
-                + '<p class="lead">' + MARKDOWN_CONVERTER.makeHtml(x.body.split('\n')[0]) + '</p>'
+                + '<p class="lead">' + MARKDOWN_CONVERTER.makeHtml(x.body.split('\n').slice(0, 4).join('\n')) + '</p>'
                 + '</div></div>'
             );
             /*
@@ -157,7 +168,7 @@ function draw_proposals(query) {
 }
 
 function search_proposals() {
-    const query = $('input[name=stateRadios]:checked').val() + $('input[name=cppVersionRadios]:checked').val() + '&q=dbgeng';
+    const query = $('input[name=stateRadios]:checked').val() + $('input[name=cppVersionRadios]:checked').val();
     draw_proposals(query);
 }
 
