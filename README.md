@@ -1,2 +1,2 @@
-# cpp-ru.github.io
+# [cpp-ru.github.io](https://cpp-ru.github.io/)
 Основной сайт Рабочей Группы 21
