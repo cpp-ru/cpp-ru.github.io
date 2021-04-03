@@ -3,10 +3,10 @@
 set -e
 
 for I in {1..10}; do
-    HTTP_STATUS=$(curl ${TOKEN:+"-u ${TOKEN}"} -f -w "%{http_code}" -o issues_${I}.txt "https://api.github.com/repos/cpp-ru/ideas/issues?state=all&per_page=100&page=${I}")
+    HTTP_STATUS=$(curl ${TOKEN:+"-u ${TOKEN}"} -f -w "%{http_code}" -o issues_${I}.txt "https://api.github.com/repos/cpp-ru/ideas/issues?state=all&per_page=100&page=${I}" -H "Accept: application/vnd.github.squirrel-girl-preview")
     if [ ${HTTP_STATUS} -ne 200 ]; then exit -1; fi
     
-    HTTP_STATUS=$(curl ${TOKEN:+"-u ${TOKEN}"} -f -w "%{http_code}" -o comments_${I}.txt "https://api.github.com/repos/cpp-ru/ideas/issues/comments?per_page=100&page=${I}")
+    HTTP_STATUS=$(curl ${TOKEN:+"-u ${TOKEN}"} -f -w "%{http_code}" -o comments_${I}.txt "https://api.github.com/repos/cpp-ru/ideas/issues/comments?per_page=100&page=${I}" -H "Accept: application/vnd.github.v3+json")
     if [ ${HTTP_STATUS} -ne 200 ]; then exit -2; fi
 done
 
