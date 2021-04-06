@@ -57,6 +57,10 @@ body {
 /* Featurettes
 ------------------------- */
 
+.proposal-idea {
+  padding-top: 15px; /* Space out the Bootstrap <hr> more */
+}
+
 .featurette-divider {
   margin: 1rem 0; /* Space out the Bootstrap <hr> more */
 }
