@@ -69,7 +69,7 @@
         <p class="lead">Идеи оформляются в виде github issue на <a href="https://github.com/cpp-ru/ideas/issues">https://github.com/cpp-ru/ideas</a>.</p>
       </div>
       <div class="col-md-4">
-        <a class="btn btn-primary btn-lg btn-block" href="https://github.com/cpp-ru/ideas/issues/new">Поделиться идеей!</a>
+        <a class="btn btn-primary btn-lg btn-block" href="https://github.com/cpp-ru/ideas/issues/new?template=idea_or_fix.md">Поделиться идеей!</a>
       </div>
     </div>
     <div class="row featurette">
@@ -151,21 +151,27 @@ function draw_proposals(query) {
         
         let content = ''; 
         for (const x of data) {
-            likes_id = 'likes_' + x.number;
-            dislikes_id = 'dislikes_' + x.number;
-            
+            let preview = x.body.split('\n').slice(0, 10).join('\n')
+            const code_escapes = (preview.match(/```/g) || []).length
+            if (code_escapes % 2 === 1) {
+                preview += '\n```'
+            }
+
             proposals.append(
                 '<div class="row featurette"><div class="col-md-12">'
                 + '<h3 class="proposal-idea"><a href="' + x.html_url + '">' + x.title + '</a></h3>'
-                + '<!--p class="text-muted">Комментариев: ' + x.comments + '<span id="' + likes_id + '"></span><span id="' + dislikes_id + '"></span></p-->'
-                + '<p class="lead">' + MARKDOWN_CONVERTER.makeHtml(x.body.split('\n').slice(0, 5).join('\n')) + '...</p>'
+                + '<p class="lead proposal-content">' + MARKDOWN_CONVERTER.makeHtml(preview) + '</p>'
                 + '</div></div>'
             );
             /*
+            const likes_id = 'likes_' + x.number;
+            const dislikes_id = 'dislikes_' + x.number;
+            proposals.append('<!--p class="text-muted">Комментариев: ' + x.comments + '<span id="' + likes_id + '"></span><span id="' + dislikes_id + '"></span></p>')
+
             $.get(GITHUB_API_URL + '/issues/' + x.number + '/reactions?content=+1', function(data_likes) {
                 $(likes_id).text(data_likes);
             });
-            
+
             $.get(GITHUB_API_URL + '/issues/' + x.number + '/reactions?content=-1', function(data_dislikes) {
                 $(dislikes_id).text(data_dislikes);
             });
