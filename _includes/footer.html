@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__inset">
+      <div class="footer__logo">
+        <a
+          class="footer__image"
+          title="{{ site.title }}"
+          href="{{ site.baseurl }}/"
+        >
+          <svg viewBox="0 0 87 62" class="footer__icon">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+          <span class="logo-header__title">{{ site.title }}</span>
+        </a>
+      </div>
+      <div class="footer__content">
+        <div class="footer__group footer__group_copyright">
+          <div class="footer__copyright">
+            {{ site.data.footer.copyright | markdownify | remove: '<p>' | remove: '</p>' }}
+          </div>
+          <ul class="footer__nav">
+            {% for item in site.data.footer.menu %}
+              <li class="footer__nav-item">
+                <a
+                  href="{% if item.external != true %}{{ site.baseurl }}{% endif %}{{ item.url }}"
+                  class="footer__link {% if item.external %}footer__link_external{% endif %}"
+                  {% if item.external %}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  {% endif %}
+                >
+                  {{ item.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer__group footer__group_up">
+          <a href="#top" class="footer__link">
+            {{ site.data.footer.up }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

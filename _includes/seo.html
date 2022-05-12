@@ -1,0 +1,9 @@
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}" />
+<meta name="keywords" content="{{ page.keywords }}" />
+<meta property="og:title" content="{% if page.ogTitle %}{{ page.ogTitle }}{% else %}{{ page.title }}{% endif %}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:image" content="{% if page.thumbnail %}{{ '/assets/images/' | append: page.thumbnail | absolute_url }}{% else %}{{ '/assets/images/' | append: site.thumbnail | absolute_url }}{% endif %}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:type" content="website" />

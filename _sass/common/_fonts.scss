@@ -1,0 +1,23 @@
+@font-face {
+  font-family: YSDisplay;
+  src: url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Light.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: YSDisplay;
+  src: url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Regular.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: YSDisplay;
+  src: url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Medium.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}

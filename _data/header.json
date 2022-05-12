@@ -1,0 +1,42 @@
+{
+  "menuTitle": "Меню",
+  "menu": [
+    {
+      "title": "О проекте",
+      "url": "/",
+      "page": "home",
+      "external": false
+    },
+    {
+      "title": "Вопросы и ответы",
+      "url": "/faq",
+      "page": "faq",
+      "external": false
+    },
+    {
+      "title": "Инструкция",
+      "url": "/instruction",
+      "page": "instruction",
+      "external": false
+    },
+    {
+      "title": "Предложения",
+      "url": "/proposals",
+      "page": "proposals",
+      "external": false
+    },
+    {
+      "title": "Новости",
+      "url": "/news",
+      "page": "news",
+      "external": false
+    },
+    {
+      "title": "About Project",
+      "url": "/en/about",
+      "page": "about-en",
+      "external": false,
+      "extraMargin": true
+    }
+  ]
+}

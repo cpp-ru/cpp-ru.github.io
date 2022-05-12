@@ -1,0 +1,19 @@
+.heading-h2 {
+  margin: 0 0 42px;
+  padding: 0;
+  font: 300 62px/1.16 $font-family-heading;
+  letter-spacing: 0.03em;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 20px;
+    font-size: 32px;
+  }
+}
+
+.heading-h2_no-margin {
+  margin-bottom: 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin-bottom: 0;
+  }
+}

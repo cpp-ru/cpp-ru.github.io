@@ -1,0 +1,30 @@
+$extra-large-viewport: 1360px;
+$large-viewport: 1260px;
+$medium-viewport: 1020px;
+$tablet-viewport: 955px;
+$menu-viewport: 1040px;
+$small-viewport: 767px;
+$smaller-viewport: 670px;
+$extra-small-viewport: 370px;
+
+@mixin breakpoint-hi($point) {
+  @media (min-width: $point) {
+    @content;
+  }
+}
+@mixin breakpoint-lo($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
+@mixin breakpoint-hi-height($point) {
+  @media (min-height: $point) {
+    @content;
+  }
+}
+@mixin breakpoint-lo-height($point) {
+  @media (max-height: $point) {
+    @content;
+  }
+}

@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-height: $height-button;
+  padding: 22px $padding-side 24px;
+  color: #fff;
+  font: 400 24px/1 $font-family-text;
+  text-align: center;
+  text-transform: uppercase;
+  background: $color-brand-blue;
+  border: solid 2px $color-brand-blue;
+  border-radius: $height-button;
+  cursor: pointer;
+  transition: color 0.3s, background 0.3s, opacity 0.3s, border-color 0.3s;
+  appearance: none;
+
+  @include breakpoint-lo($small-viewport) {
+    min-height: $height-button-sm;
+    padding: 13px $padding-side-sm 15px;
+    font-size: 18px;
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-brand-blue;
+    background: #fff;
+    outline: none;
+  }
+}

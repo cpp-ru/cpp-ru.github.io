@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+  background-color: $color-bg-body;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: $min-body-width;
+  height: 100%;
+  color: $color-text;
+  font-family: $font-family-text;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  background: $color-bg-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 16px;
+  }
+
+  &_modal-open {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.svg-defs {
+  display: none;
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+input::-ms-clear {
+  display: none;
+}
+

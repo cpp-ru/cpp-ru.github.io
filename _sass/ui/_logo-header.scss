@@ -1,0 +1,29 @@
+.logo-header {
+  position: relative;
+}
+
+.logo-header__image {
+  color: $color-brand-blue;
+  opacity: 1;
+  transition: opacity 0.3s, color 0.3s;
+
+  /* &:hover {
+    opacity: 0.8;
+  } */
+}
+
+.logo-header__icon {
+  display: block;
+  width: 87px;
+  height: 62px;
+
+  @include breakpoint-lo($menu-viewport) {
+    width: 58px;
+    height: 41px;
+  }
+}
+
+.logo-header__title {
+  position: absolute;
+  left: -1000em;
+}
