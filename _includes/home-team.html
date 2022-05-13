@@ -1,0 +1,42 @@
+{% assign fields = site.data.page_index.fields.team %}
+<div class="home-team">
+  <div class="home-team__inset">
+    <div class="home-team__container container">
+      <h1 class="home-team__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h1>
+      <div class="home-team__list-wrap">
+        <ul class="home-team__list">
+          {% for item in fields.list %}
+          <li class="home-team__list-item">
+            <div class="home-team__list-item-inset">
+              <div class="home-team__list-item-photo home-team__list-item-photo_{{item.slug}}">
+                <img
+                  class="home-team__list-item-pic"
+                  src="{{'/assets/images/team/' | append: item.slug | append: '.png' | relative_url}}"
+                  srcSet="
+                    {{'/assets/images/team/' | append: item.slug | append: '.png' | relative_url}},
+                    {{'/assets/images/team/' | append: item.slug | append: '@2x.png' | relative_url}} 2x
+                  "
+                  alt="{{ item.name }}"
+                />
+              </div>
+              <div class="home-team__list-item-content">
+                <strong class="home-team__list-item-name">
+                  {{ item.name | markdownify | remove: '<p>' | remove: '</p>' }}
+                </strong>
+                <span class="home-team__list-item-position">
+                  {{ item.position | markdownify | remove: '<p>' | remove: '</p>' }}
+                </span>
+                <span class="home-team__list-item-text">
+                  {{ item.text | markdownify }}
+                </span>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

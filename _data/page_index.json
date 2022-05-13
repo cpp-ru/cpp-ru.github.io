@@ -49,6 +49,35 @@
         "url": "/proposals",
         "text": "Смотреть все предложения →"
       }
+    },
+    "team": {
+      "heading": "Состав РГ21 С++",
+      "list": [
+        {
+          "slug": "poluhin",
+          "name": "Антон Полухин",
+          "position": "Председатель",
+          "text": "Разработчик в&nbsp;команде сервиса Яндекс.Такси, мейнтейнер Boost, автор и&nbsp;соавтор множества предложений в&nbsp;стандарт&nbsp;C++, автор книги &laquo;Boost C++&nbsp;Application Development Cookbook&raquo;. Информация по&nbsp;другим активностям доступна на&nbsp;[http://apolukhin.github.io/](http://apolukhin.github.io/)."
+        },
+        {
+          "slug": "fokin",
+          "name": "Александр Фокин",
+          "position": "Сопредседатель",
+          "text": "Специалист в&nbsp;области поисковых технологий, руководил службой разработки поисковых компонент Яндекса в&nbsp;течение многих лет."
+        },
+        {
+          "slug": "makarova",
+          "name": "Наталия Макарова",
+          "position": "Менеджер",
+          "text": "Developer Relations Expert, менеджер проектов."
+        },
+        {
+          "slug": "bikineev",
+          "name": "Антон Бикинеев",
+          "position": "Участник",
+          "text": "Разработчик АО&nbsp;&laquo;Лаборатория Касперского&raquo;."
+        }
+      ]
     }
   }
 }
