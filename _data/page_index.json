@@ -6,6 +6,15 @@
       "cta": {
         "url": "https://github.com/cpp-ru/cpp-ru.github.io/issues/new",
         "text": "Вступить"
+      },
+      "goals": [
+        "Собираем идеи развития стандарта&nbsp;C++",
+        "Организуем их внутренние обсуждения",
+        "Помогаем готовить предложения для защиты перед рабочей группой Комитета ISO&nbsp;C++"
+      ],
+      "github": {
+        "url": "https://github.com/cpp-ru",
+        "text": "GitHub"
       }
     }
   }

@@ -3,11 +3,11 @@
   <div class="home-hero__container container">
     <div class="home-hero_page-label page-label">
       <div class="page-label__label">
-        {{ fields.label | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ fields.label | markdownify | remove: '<p>' | remove: '</p>' }}
       </div>
     </div>
     <h1 class="home-hero__heading heading-h1">
-      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>'}}
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
     </h1>
     <div class="home-hero__cta">
       <a
@@ -18,6 +18,29 @@
       >
         {{ fields.cta.text }}
       </a>
+    </div>
+    <div class="home-hero__blocks">
+      <div class="home-hero__block home-hero__block_l">
+        <div class="home-hero__block-inset home-hero__block-inset_l">
+          <ul class="home-hero__goals">
+            {% for item in fields.goals %}
+              <li class="home-hero__goals-item">
+                {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="home-hero__block home-hero__block_r">
+        <a
+          href="{{ fields.github.url }}"
+          class="home-hero__block-inset home-hero__block-inset_r home-hero__block-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ fields.github.text | markdownify | remove: '<p>' | remove: '</p>' }}
+        </a>
+      </div>
     </div>
   </div>
 </div>

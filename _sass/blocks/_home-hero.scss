@@ -5,3 +5,118 @@
 .home-hero__cta {
   margin: 40px 0 50px;
 }
+
+.home-hero__blocks {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 56px -20px;
+
+  @include breakpoint-lo($small-viewport) {
+    flex-wrap: wrap;
+    margin: 47px -20px 60px;
+  }
+}
+
+.home-hero__block {
+  width: 100%;
+  padding: 0 20px;
+
+  &_r {
+    @include breakpoint-lo($small-viewport) {
+      margin: 47px 0 0;
+    }
+  }
+}
+
+.home-hero__block-inset {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 36px 40px;
+  border: 2px solid $color-text;
+
+  &_l {
+    border-radius: 10px 10px 10px 100px;
+
+    @include breakpoint-lo($small-viewport) {
+      border-radius: 10px 10px 10px 60px;
+    }
+  }
+
+  &_r {
+    border-radius: 10px 100px 10px 10px;
+
+    @include breakpoint-lo($small-viewport) {
+      border-radius: 200px 100px 100px 10px;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 24px 13px 38px;
+  }
+}
+
+.home-hero__block-link {
+  display: flex;
+  align-items: flex-end;
+  padding: 39px 47px;
+  background: transparent;
+  transition: background 0.3s;
+  color: $color-text;
+  font-weight: 300;
+  font-size: 62px;
+
+  &:hover {
+    background: #fff;
+    color: $color-text;
+  }
+
+  @include breakpoint-lo($medium-viewport) {
+    font-size: 52px;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    justify-content: center;
+    padding: 26px 47px;
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.home-hero__goals {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-hero__goals-item {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0 0 0 40px;
+  font-size: 24px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background: url('#{$baseurl}/assets/images/i-bullet-plus-circle.svg') transparent 0 0 no-repeat;
+  }
+
+  @include breakpoint-lo($medium-viewport) {
+    font-size: 20px;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 6px 0 0 40px;
+    font-size: 16px;
+  }
+}
