@@ -1,0 +1,49 @@
+{% assign fields = site.data.page_index.fields.results %}
+<div class="home-results">
+  <div class="home-results__inset">
+    <div class="home-results__container container">
+      <h1 class="home-results__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h1>
+      <div class="home-results__cols">
+        <div class="home-results__col home-results__col_l">
+          {{ fields.text.col1 | markdownify }}
+        </div>
+        <div class="home-results__col home-results__col_r">
+          {{ fields.text.col2 | markdownify }}
+        </div>
+      </div>
+      <div class="home-results__list-wrap">
+        <ul class="home-results__list">
+          {% for item in fields.list %}
+          <li class="home-results__goals-item">
+            <div class="home-results__goals-item-inset">
+              <strong class="home-results__goals-item-title">
+                {{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}
+              </strong>
+              <span class="home-results__goals-item-text">
+                {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}
+              </span>
+            </div>
+          </li>
+          {% endfor %}
+          <li class="home-results__goals-item home-results__goals-item_cta">
+            <a href="{{ site.baseurl }}{{ item.url }}" class="home-results__cta-link">
+              {{ fields.cta.text | markdownify | remove: '<p>' | remove: '</p>' }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="home-results__text-addon">
+        {{ fields.text.col2 | markdownify }}
+      </div>
+    </div>
+  </div>
+  <div class="home-results__container container">
+    <div class="home-results__cta">
+      <a href="{{ site.baseurl }}{{ item.url }}" class="home-results__cta-link">
+        {{ fields.cta.text | markdownify | remove: '<p>' | remove: '</p>' }}
+      </a>
+    </div>
+  </div>
+</div>
