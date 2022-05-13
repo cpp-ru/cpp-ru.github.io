@@ -28,7 +28,7 @@
           </li>
           {% endfor %}
           <li class="home-results__goals-item home-results__goals-item_cta">
-            <a href="{{ site.baseurl }}{{ item.url }}" class="home-results__cta-link">
+            <a href="{{ site.baseurl }}{{ fields.cta.url }}" class="home-results__cta-link">
               {{ fields.cta.text | markdownify | remove: '<p>' | remove: '</p>' }}
             </a>
           </li>
@@ -41,7 +41,7 @@
   </div>
   <div class="home-results__container container">
     <div class="home-results__cta">
-      <a href="{{ site.baseurl }}{{ item.url }}" class="home-results__cta-link">
+      <a href="{{ site.baseurl }}{{ fields.cta.url }}" class="home-results__cta-link">
         {{ fields.cta.text | markdownify | remove: '<p>' | remove: '</p>' }}
       </a>
     </div>
