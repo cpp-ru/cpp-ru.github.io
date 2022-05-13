@@ -1,0 +1,8 @@
+{% assign fields = site.data.page_faq.fields.hero %}
+<div class="faq-hero">
+  <div class="faq-hero__container container">
+    <h1 class="faq-hero__heading heading-h1">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h1>
+  </div>
+</div>

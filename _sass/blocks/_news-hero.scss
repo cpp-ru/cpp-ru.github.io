@@ -1,0 +1,11 @@
+.news-hero__heading {
+  @include breakpoint-lo($small-viewport) {
+    margin-top: 47px;
+  }
+}
+
+.news-hero_page-label {
+  @include breakpoint-lo($small-viewport) {
+    display: none;
+  }
+}

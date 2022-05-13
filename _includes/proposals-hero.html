@@ -1,0 +1,8 @@
+{% assign fields = site.data.page_proposals.fields.hero %}
+<div class="proposals-hero">
+  <div class="proposals-hero__container container">
+    <h1 class="proposals-hero__heading heading-h1">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h1>
+  </div>
+</div>

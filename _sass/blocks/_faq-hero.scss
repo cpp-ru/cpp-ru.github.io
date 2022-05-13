@@ -1,0 +1,8 @@
+.faq-hero__heading {
+  margin-top: 142px;
+
+  @include breakpoint-lo($small-viewport) {
+    max-width: 130px;
+    margin-top: 47px;
+  }
+}

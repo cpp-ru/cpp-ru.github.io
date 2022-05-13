@@ -3,8 +3,8 @@
   "menu": [
     {
       "title": "Политика конфиденциальности",
-      "url": "/terms",
-      "external": false
+      "url": "https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement",
+      "external": true
     }
   ],
   "up": "Наверх"

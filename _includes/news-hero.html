@@ -1,0 +1,13 @@
+{% assign fields = site.data.page_news.fields.hero %}
+<div class="news-hero">
+  <div class="news-hero__container container">
+    <div class="news-hero_page-label page-label">
+      <div class="page-label__label">
+        {{ fields.label | markdownify | remove: '<p>' | remove: '</p>' }}
+      </div>
+    </div>
+    <h1 class="news-hero__heading heading-h1">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h1>
+  </div>
+</div>
