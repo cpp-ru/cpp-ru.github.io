@@ -21,6 +21,8 @@
 title: Национальная рабочая группа по стандартизации С++
 description:
 thumbnail: social-share.png
+thumbnailVK: social-share-vk.png
+thumbnailTw: social-share-tw.png
 # domain: stdcpp.ru
 baseurl: /stdcpp-v2.github.io # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
