@@ -1,8 +1,8 @@
 .home-team {
-  padding: 0 0 110px;
+  margin: 0 0 110px;
 
   @include breakpoint-lo($small-viewport) {
-    padding: 0 0 53px;
+    margin: 0 0 53px;
   }
 }
 

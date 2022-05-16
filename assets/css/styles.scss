@@ -21,11 +21,14 @@ $label: "{{ site.title }}";
 @import "ui/button";
 @import "ui/logo-header";
 @import "ui/page-label";
+@import "ui/insert-text";
+@import "ui/insert-block";
 
 @import "blocks/error-content";
 @import "blocks/home-hero";
 @import "blocks/home-results";
 @import "blocks/home-team";
+@import "blocks/home-join";
 
 @import "blocks/faq-hero";
 

@@ -1,0 +1,66 @@
+{% assign fields = site.data.page_index.fields.join %}
+<div class="home-join">
+  <div class="home-join__inset">
+    <div class="home-join__container container">
+      <h1 class="home-join__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h1>
+      <div class="home-join__cols">
+        <div class="home-join__col home-join__col_l">
+          <div class="home-join__text home-join__text_mobile-hide">
+            {{ fields.text.col1 | markdownify }}
+          </div>
+          <div class="home-join__text-bold home-join__text-bold_mobile-show">
+            {{ fields.text.col2 | markdownify }}
+          </div>
+
+          <div class="home-join__insert-text insert-text">
+            <div class="insert-text__text">
+              {{ fields.insertText | markdownify }}
+            </div>
+          </div>
+
+        </div>
+        <div class="home-join__col home-join__col_r">
+          <div class="home-join__text home-join__text_mobile-show">
+            {{ fields.text.col1 | markdownify }}
+          </div>
+          <div class="home-join__text-bold home-join__text-bold_mobile-hide">
+            {{ fields.text.col2 | markdownify }}
+          </div>
+
+          <div class="home-join__insert-block insert-block">
+            <div class="insert-block__icon-wrap">
+              <svg viewBox="0 0 34 34" class="insert-block__icon insert-block__icon_arrow-angle">
+                <use xlink:href="#icon-arrow-angle"></use>
+              </svg>
+            </div>
+            <div class="insert-block__inset">
+              <h3 class="insert-block__title">
+                {{ fields.insertBlock.title | markdownify | remove: '<p>' | remove: '</p>' }}
+              </h3>
+              <ul class="insert-block__list">
+                {% for item in fields.insertBlock.list %}
+                  <li class="insert-block__list-item">
+                    {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="home-join__cta">
+        <a
+          href="{{ fields.cta.url }}"
+          class="home-hero__cta-button button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ fields.cta.text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

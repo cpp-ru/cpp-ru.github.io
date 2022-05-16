@@ -4,6 +4,11 @@
   font: 300 62px/1.16 $font-family-heading;
   letter-spacing: 0.03em;
 
+  strong {
+    color: $color-text-accent;
+    font-weight: 300;
+  }
+
   @include breakpoint-lo($small-viewport) {
     margin: 0 0 20px;
     font-size: 32px;

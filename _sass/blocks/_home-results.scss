@@ -32,6 +32,14 @@
 .home-results__col {
   width: 50%;
 
+  &_l {
+    padding-right: 10px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
   &_r {
     padding-left: 30px;
     font-weight: 500;

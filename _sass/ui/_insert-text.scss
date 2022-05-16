@@ -1,0 +1,41 @@
+.insert-text {
+  padding: 36px 75px 36px 32px;
+  background: $color-gray-light;
+  border-radius: 10px 113px 113px 10px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin-left: -1 * $padding-side-sm;
+    padding: 35px 38px 35px 32px;
+    border-radius: 10px 60px 60px 10px;
+  }
+
+  &_round-left {
+    padding: 36px 32px 36px 75px;
+    border-radius: 113px 10px 10px 113px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding: 35px 32px 35px 38px;
+      border-radius: 60px 10px 10px 60px;
+    }
+  }
+}
+
+.insert-text__text {
+  font-size: 16px;
+
+  a {
+    font-weight: 700;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 14px;
+  }
+}
