@@ -1,0 +1,24 @@
+{% assign fields = site.data.page_instruction.fields.start %}
+<div class="instruction-start">
+  <div class="instruction-start__inset">
+    <div class="instruction-start__container container">
+      <h2 class="instruction-start__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h2>
+      <ul class="instruction-start__list">
+        {% for item in fields.list %}
+          <li class="instruction-start__list-item">
+            <div class="instruction-start__list-item-inset">
+              <div class="instruction-start__list-item-num">
+                {{ forloop.index }}
+              </div>
+              <div class="instruction-start__list-item-text">
+                {{ item.text | markdownify }}
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

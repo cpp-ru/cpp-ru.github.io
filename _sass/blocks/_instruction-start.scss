@@ -1,0 +1,115 @@
+.instruction-start {
+  margin: 0 0 55px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 60px;
+  }
+}
+
+.instruction-start__inset {
+  margin: 0 auto;
+  padding: 50px 0;
+  background: #fff;
+  border-radius: 50px;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 40px 0 10px;
+    border-radius: 20px;
+  }
+}
+
+/* List */
+
+.instruction-start__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  list-style: none;
+  margin: -40px -20px 0;
+  padding: 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: -10px 0 20px;
+  }
+}
+
+.instruction-start__list-item {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 0 20px;
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.instruction-start__list-item-inset {
+  position: relative;
+  flex-grow: 1;
+  padding: 33px 0 30px;
+  border-bottom: solid 2px $color-text;
+
+  .instruction-start__list-item:nth-child(odd) & {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -21px;
+      bottom: 20px;
+      border-right: solid 2px $color-text;
+
+      @include breakpoint-lo($small-viewport) {
+        display: none;
+      }
+    }
+  }
+
+  .instruction-start__list-item:last-child & {
+    @include breakpoint-lo($small-viewport) {
+      border: none;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 20px 0;
+  }
+}
+
+.instruction-start__list-item-num {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 15px;
+  border: solid 2px $color-text;
+  border-radius: 30px;
+  font-size: 14px;
+
+  @include breakpoint-lo($small-viewport) {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 26px;
+    height: 26px;
+    margin: 0 12px 0 0;
+    font-size: 12px;
+  }
+}
+
+.instruction-start__list-item-text {
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
