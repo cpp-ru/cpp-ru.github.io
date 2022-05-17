@@ -7,6 +7,10 @@
   padding: 0 $padding-side;
   text-align: left;
 
+  @include breakpoint-lo($medium-viewport) {
+    padding: 0 $padding-side-md;
+  }
+
   @include breakpoint-lo($small-viewport) {
     padding: 0 $padding-side-sm;
   }

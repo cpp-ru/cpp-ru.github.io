@@ -1,0 +1,135 @@
+.instruction-before {
+  margin: 55px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 60px 0;
+  }
+}
+
+.instruction-before__inset {
+  max-width: $width-container;
+  margin: 0 auto;
+  padding: 50px 0;
+  border: solid $color-brand-blue;
+  border-width: 2px 2px 0;
+  border-radius: 50px 50px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 0;
+    border: none;
+  }
+}
+
+/* Text */
+
+.instruction-before__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.instruction-before__col {
+  width: 50%;
+
+  &_l {
+    padding-right: 50px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    display: none;
+
+    @include breakpoint-hi($small-viewport + 1px) {
+      display: block;
+      padding: 0 20px 0 30px;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
+}
+
+/* Text */
+
+.instruction-before__intro {
+  font-size: 24px;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 16px;
+  }
+}
+
+.instruction-before__side-text {
+  font-weight: 500;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* List */
+
+.instruction-before__list {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 60px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 20px 0 0;
+    columns: 1;
+    column-gap: 0;
+  }
+}
+
+.instruction-before__list-item {
+  position: relative;
+  margin: 0;
+  padding: 6px 40px 25px 40px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 27px;
+    height: 27px;
+    background: url('#{$baseurl}/assets/images/i-bullet-arrow-circle.svg') transparent 0 0 no-repeat;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 8px 0 10px 40px;
+    font-size: 14px;
+  }
+}
+
+/* Addon text */
+
+.instruction-before__text-addon {
+  display: block;
+  font-weight: 500;
+
+  @include breakpoint-hi($small-viewport + 1px) {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+{% assign fields = site.data.page_instruction.fields.before %}
+<div class="instruction-before">
+  <div class="instruction-before__inset">
+    <div class="instruction-before__container container">
+      <h2 class="instruction-before__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h2>
+      <div class="instruction-before__cols">
+        <div class="instruction-before__col instruction-before__col_l">
+          <div class="instruction-before__intro">
+            {{ fields.text.col1 | markdownify }}
+          </div>
+        </div>
+        <div class="instruction-before__col instruction-before__col_r">
+          <div class="instruction-before__side-text">
+            {{ fields.text.col2 | markdownify }}
+          </div>
+        </div>
+      </div>
+      <ul class="instruction-before__list">
+        {% for item in fields.list %}
+          <li class="instruction-before__list-item">
+            {{ item | markdownify | remove: '<p>' | remove: '</p>' }}
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="instruction-before__text-addon">
+        {{ fields.text.col2 | markdownify }}
+      </div>
+    </div>
+  </div>
+</div>
