@@ -63,6 +63,24 @@
   }
 }
 
+.header_menu-opened .header__row,
+.header__checkbox:checked + .header__container .header__row {
+  @include breakpoint-lo($menu-viewport) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -23px;
+      right: -1 * $padding-side-sm;
+      bottom: -23px;
+      left: -1 * $padding-side-sm;
+      z-index: 101;
+      background: #fff;
+    }
+  }
+}
+
 .header__checkbox {
   display: none;
 }
