@@ -1,4 +1,5 @@
 .insert-text {
+  position: relative;
   padding: 36px 75px 36px 32px;
   background: $color-gray-light;
   border-radius: 10px 113px 113px 10px;
@@ -10,6 +11,8 @@
   }
 
   &_round-left {
+    margin-right: -1 * $padding-side-sm;
+    margin-left: 0;
     padding: 36px 32px 36px 75px;
     border-radius: 113px 10px 10px 113px;
 
@@ -18,7 +21,64 @@
       border-radius: 60px 10px 10px 60px;
     }
   }
+
+  &_mobile-inverse {
+    @include breakpoint-lo($small-viewport) {
+      margin-right: -1 * $padding-side-sm;
+      margin-left: 0;
+      padding: 35px 32px 35px 38px;
+      border-radius: 60px 10px 10px 60px;
+    }
+
+    &.insert-text_round-left {
+      @include breakpoint-lo($small-viewport) {
+        padding: 35px 38px 35px 32px;
+        border-radius: 10px 60px 60px 10px;
+      }
+    }
+  }
+
+  &_white {
+    background: #fff;
+  }
 }
+
+/* Icon */
+
+.insert-text__icon-wrap {
+  position: absolute;
+  top: -24px;
+  right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: $color-text;
+  border-radius: 48px;
+  color: #fff;
+
+  @include breakpoint-lo($small-viewport) {
+    top: -14px;
+    right: 42px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.insert-text__icon {
+  &_arrow-angle {
+    width: 34px;
+    height: 34px;
+
+    @include breakpoint-lo($small-viewport) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+/* Text */
 
 .insert-text__text {
   font-size: 16px;
@@ -33,6 +93,11 @@
 
   p:last-child {
     margin-bottom: 0;
+  }
+
+  &_big {
+    font-weight: 500;
+    font-size: 18px;
   }
 
   @include breakpoint-lo($small-viewport) {

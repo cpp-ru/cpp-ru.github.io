@@ -16,7 +16,7 @@
   }
 }
 
-/* Text */
+/* Cols */
 
 .home-join__cols {
   display: flex;
@@ -48,10 +48,6 @@
       order: -1;
       padding-left: 0;
     }
-
-    /* @include breakpoint-lo($smaller-viewport) {
-      display: none;
-    } */
   }
 
   @include breakpoint-lo($small-viewport) {

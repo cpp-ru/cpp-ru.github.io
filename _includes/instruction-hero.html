@@ -9,5 +9,24 @@
     <h1 class="instruction-hero__heading heading-h1">
       {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
     </h1>
+    <div class="instruction-hero__cols">
+      <div class="instruction-hero__col instruction-hero__col_l">
+        <div class="instruction-hero__text">
+          {{ fields.text | markdownify }}
+        </div>
+      </div>
+      <div class="instruction-hero__col instruction-hero__col_r">
+        <div class="instruction-hero__insert-text insert-text insert-text_white insert-text_mobile-inverse">
+          <div class="insert-text__icon-wrap">
+            <svg viewBox="0 0 34 34" class="insert-text__icon insert-text__icon_arrow-angle">
+              <use xlink:href="#icon-arrow-angle"></use>
+            </svg>
+          </div>
+          <div class="insert-text__text insert-text__text_big">
+            {{ fields.insert | markdownify }}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

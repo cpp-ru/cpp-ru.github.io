@@ -1,3 +1,43 @@
+.instruction-hero {
+  margin: 0 0 60px;
+}
+
 .instruction-hero__heading {
   max-width: 760px;
+}
+
+.instruction-hero__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: -15px 0 0;
+}
+
+.instruction-hero__col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 50%;
+
+  &_l {
+    padding-right: 40px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    padding-left: 0;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-top: 25px;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
 }
