@@ -7,14 +7,74 @@
       </h2>
       <ul class="instruction-start__list">
         {% for item in fields.list %}
-          <li class="instruction-start__list-item">
+          <li class="instruction-start__list-item {% if item.wide %}instruction-start__list-item_wide{% endif %}">
             <div class="instruction-start__list-item-inset">
-              <div class="instruction-start__list-item-num">
-                {{ forloop.index }}
-              </div>
-              <div class="instruction-start__list-item-text">
-                {{ item.text | markdownify }}
-              </div>
+              {% if item.wide %}
+                <div class="instruction-start__list-item-cols">
+                  <div class="instruction-start__list-item-col instruction-start__list-item-col_l">
+
+                    <div class="instruction-start__list-item-head">
+                      <div class="instruction-start__list-item-num">
+                        {{ forloop.index }}
+                      </div>
+                      <div class="instruction-start__list-item-text">
+                        {{ item.text1 | markdownify }}
+                      </div>
+                    </div>
+
+                    {% if item.text2 %}
+                      <div class="instruction-start__list-item-foot instruction-start__list-item-foot_mobile-hide">
+                        <div class="instruction-start__list-item-text">
+                          {{ item.text2 | markdownify }}
+                        </div>
+                      </div>
+                    {% endif %}
+
+                  </div>
+                  <div class="instruction-start__list-item-col instruction-start__list-item-col_r">
+
+                    {% if item.list %}
+                      <ul class="instruction-start__inner-list">
+                        {% for item2 in item.list %}
+                          <li class="instruction-start__inner-list-item">
+                            <strong class="instruction-start__inner-list-item-title">
+                              {{ item2.title | markdownify | remove: '<p>' | remove: '</p>' }}
+                            </strong>
+                            <div class="instruction-start__inner-list-item-text">
+                              {{ item2.text | markdownify | remove: '<p>' | remove: '</p>' }}
+                            </div>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                    {% if item.text3 %}
+                      <div class="instruction-start__list-item-side-text">
+                        <div class="instruction-start__list-item-text">
+                          {{ item.text3 | markdownify }}
+                        </div>
+                      </div>
+                    {% endif %}
+
+                  </div>
+                </div>
+                {% if item.text2 %}
+                  <div class="instruction-start__list-item-foot instruction-start__list-item-foot_mobile-show">
+                    <div class="instruction-start__list-item-text">
+                      {{ item.text2 | markdownify }}
+                    </div>
+                  </div>
+                {% endif %}
+              {% else %}
+                <div class="instruction-start__list-item-head">
+                  <div class="instruction-start__list-item-num">
+                    {{ forloop.index }}
+                  </div>
+                  <div class="instruction-start__list-item-text">
+                    {{ item.text | markdownify }}
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </li>
         {% endfor %}

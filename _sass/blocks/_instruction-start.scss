@@ -30,7 +30,7 @@
   padding: 0;
 
   @include breakpoint-lo($small-viewport) {
-    margin: -10px 0 20px;
+    margin: -10px 0 10px;
   }
 }
 
@@ -41,6 +41,10 @@
   width: 50%;
   margin: 0;
   padding: 0 20px;
+
+  &_wide {
+    width: 100%;
+  }
 
   @include breakpoint-lo($small-viewport) {
     width: 100%;
@@ -69,6 +73,12 @@
     }
   }
 
+  .instruction-start__list-item_wide & {
+    &::after {
+      display: none;
+    }
+  }
+
   .instruction-start__list-item:last-child & {
     @include breakpoint-lo($small-viewport) {
       border: none;
@@ -76,9 +86,30 @@
   }
 
   @include breakpoint-lo($small-viewport) {
+    padding: 20px 0;
+  }
+}
+
+.instruction-start__list-item-head {
+  @include breakpoint-lo($small-viewport) {
     display: flex;
     flex-flow: row nowrap;
-    padding: 20px 0;
+  }
+}
+
+.instruction-start__list-item-foot {
+  &_mobile-hide {
+    @include breakpoint-lo($small-viewport) {
+      display: none;
+    }
+  }
+
+  &_mobile-show {
+    display: none;
+
+    @include breakpoint-lo($small-viewport) {
+      display: block;
+    }
   }
 }
 
@@ -111,5 +142,74 @@
 
   p:last-child {
     margin-bottom: 0;
+  }
+}
+
+/* Wide item content */
+
+.instruction-start__list-item-cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.instruction-start__list-item-col {
+  width: 50%;
+
+  &_l {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+
+  &_r {
+    padding-left: 20px;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.instruction-start__inner-list {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 15px 0;
+  }
+}
+
+.instruction-start__inner-list-item {
+  position: relative;
+  margin: 0;
+  padding: 5px 40px 12px 40px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 27px;
+    height: 27px;
+    background: url('#{$baseurl}/assets/images/i-bullet-arrow-circle.svg') transparent 0 0 no-repeat;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 8px 0 10px 40px;
+    font-size: 14px;
+  }
+}
+
+.instruction-start__list-item-side-text {
+  margin: 45px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 1em 0 0 38px;
   }
 }

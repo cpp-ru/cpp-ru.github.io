@@ -21,3 +21,11 @@
   font-style: normal;
   font-display: fallback;
 }
+
+@font-face {
+  font-family: YSDisplay;
+  src: url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Bold.woff2') format('woff2'), url('#{$baseurl}/assets/fonts/ys-display/YS-Display-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
