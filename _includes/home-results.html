@@ -2,9 +2,9 @@
 <div class="home-results">
   <div class="home-results__inset">
     <div class="home-results__container container">
-      <h1 class="home-results__heading heading-h2">
+      <h2 class="home-results__heading heading-h2">
         {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
-      </h1>
+      </h2>
       <div class="home-results__cols">
         <div class="home-results__col home-results__col_l">
           {{ fields.text.col1 | markdownify }}
@@ -41,7 +41,7 @@
   </div>
   <div class="home-results__container container">
     <div class="home-results__cta">
-      <a href="{{ site.baseurl }}{{ fields.cta.url }}" class="home-results__cta-link">
+      <a href="{{ fields.cta.url | relative_url }}" class="home-results__cta-link">
         {{ fields.cta.text | markdownify | remove: '<p>' | remove: '</p>' }}
       </a>
     </div>

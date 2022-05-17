@@ -2,9 +2,9 @@
 <div class="home-team">
   <div class="home-team__inset">
     <div class="home-team__container container">
-      <h1 class="home-team__heading heading-h2">
+      <h2 class="home-team__heading heading-h2">
         {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
-      </h1>
+      </h2>
       <div class="home-team__list-wrap">
         <ul class="home-team__list">
           {% for item in fields.list %}

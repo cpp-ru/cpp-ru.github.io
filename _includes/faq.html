@@ -1,0 +1,25 @@
+{% assign fields = site.data.page_faq.fields.faq %}
+<div class="faq">
+  <div class="faq__container container">
+    <ul class="faq__list">
+      {% for item in fields.list %}
+        <li class="faq__list-item">
+          <strong class="faq_q">
+            {{ item.q | markdownify | remove: '<p>' | remove: '</p>' }}
+          </strong>
+          <div class="faq_a">
+            {{ item.a | markdownify }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="faq__cta">
+      <a
+        href="{{ fields.cta.url | relative_url }}"
+        class="home-hero__cta-button button"
+      >
+        {{ fields.cta.text }}
+      </a>
+    </div>
+  </div>
+</div>

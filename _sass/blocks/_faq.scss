@@ -1,0 +1,77 @@
+.faq__list {
+  margin: 60px 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 40px 0;
+  }
+}
+
+.faq__list-item {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 48px 0;
+  border-bottom: solid 2px $color-text;
+
+  &:first-child {
+    padding-top: 0;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-top: 0;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 40px 0 30px;
+  }
+}
+
+.faq_q {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50%;
+  padding-right: 10px;
+  font: 400 42px/1.16 $font-family-heading;
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    margin: 0 0 20px;
+    padding-right: 0;
+    color: $color-text-accent;
+    font-size: 24px;
+  }
+}
+
+.faq_a {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50%;
+  padding-left: 30px;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.faq__cta {
+  margin: 0 0 100px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 60px;
+  }
+}
