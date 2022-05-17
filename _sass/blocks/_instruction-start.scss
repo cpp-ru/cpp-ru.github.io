@@ -79,6 +79,10 @@
     }
   }
 
+  .instruction-start__list-item_wide:last-child & {
+    border-bottom: none;
+  }
+
   .instruction-start__list-item:last-child & {
     @include breakpoint-lo($small-viewport) {
       border: none;

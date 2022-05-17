@@ -8,13 +8,14 @@
 
 .instruction-before__inset {
   max-width: $width-container;
-  margin: 0 auto;
-  padding: 50px 0;
+  margin: 0 auto -50px;
+  padding: 50px 0 100px;
   border: solid $color-brand-blue;
   border-width: 2px 2px 0;
   border-radius: 50px 50px 0 0;
 
   @include breakpoint-lo($small-viewport) {
+    margin-bottom: 0;
     padding: 0;
     border: none;
   }
