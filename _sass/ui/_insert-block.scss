@@ -1,5 +1,9 @@
 .insert-block {
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-end;
   margin: 40px 0 0;
   padding: 32px 30px;
   border: solid 2px $color-text;
@@ -9,6 +13,35 @@
     margin: 33px 0 0;
     padding: 27px 11px;
     border-radius: 10px 60px 10px 10px;
+  }
+
+  &_round-left {
+    border-radius: 100px 10px 10px 10px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding: 27px 20px 27px 33px;
+      border-radius: 60px 10px 10px 10px;
+    }
+  }
+
+  &_min-height {
+    min-height: 172px;
+
+    @include breakpoint-lo($small-viewport) {
+      min-height: 150px;
+    }
+  }
+}
+
+a.insert-block {
+  background: #fff;
+  color: $color-text;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background: $color-text;
+    color: #fff;
   }
 }
 
@@ -26,12 +59,18 @@
   background: $color-text;
   border-radius: 48px;
   color: #fff;
+  transition: background 0.3s, color 0.3s;
 
   @include breakpoint-lo($small-viewport) {
     top: -14px;
     right: 42px;
     width: 28px;
     height: 28px;
+  }
+
+  a.insert-block:hover & {
+    background: #fff;
+    color: $color-text;
   }
 }
 
@@ -45,9 +84,19 @@
       height: 20px;
     }
   }
+
+  &_link {
+    width: 26px;
+    height: 26px;
+
+    @include breakpoint-lo($small-viewport) {
+      width: 17px;
+      height: 17px;
+    }
+  }
 }
 
-/* Content */
+/* Title */
 
 .insert-block__title {
   margin: 0 0 28px;
@@ -58,6 +107,31 @@
     margin: 0 0 20px;
   }
 }
+
+/* Text */
+
+.insert-block__text {
+  font-size: 16px;
+
+  strong {
+    font-weight: 400;
+    color: $color-text-accent;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 14px;
+  }
+}
+
+/* List */
 
 .insert-block__list {
   margin: 0;

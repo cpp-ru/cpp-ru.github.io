@@ -1,0 +1,44 @@
+{% assign fields = site.data.page_instruction.fields.examples %}
+<div class="instruction-examples">
+  <div class="instruction-examples__container container">
+    <h2 class="instruction-examples__heading heading-h2">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h2>
+    <div class="instruction-examples__cols">
+      <div class="instruction-examples__col instruction-examples__col_l">
+        <div class="instruction-examples__text">
+          {{ fields.text | markdownify }}
+        </div>
+      </div>
+      <div class="instruction-examples__col instruction-examples__col_r">
+        <a
+          href="{{ fields.insert.url }}"
+          class="instruction-examples__insert-block insert-block insert-block_round-left insert-block_min-height"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="insert-block__icon-wrap">
+            <svg viewBox="0 0 26 26" class="insert-block__icon insert-block__icon_link">
+              <use xlink:href="#icon-link"></use>
+            </svg>
+          </div>
+          <div class="insert-block__inset">
+            <div class="insert-block__text">
+              {{ fields.insert.text | markdownify }}
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="instruction-examples__cta">
+      <a
+        href="{{ fields.cta.url }}"
+        class="instruction-examples__cta-button button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ fields.cta.text }}
+      </a>
+    </div>
+  </div>
+</div>
