@@ -4,5 +4,31 @@
     <h1 class="proposals-hero__heading heading-h1">
       {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
     </h1>
+    <div class="proposals-hero__cols">
+      <div class="proposals-hero__col proposals-hero__col_l">
+        <div class="proposals-hero__text">
+          {{ fields.text | markdownify }}
+        </div>
+      </div>
+      <div class="proposals-hero__col proposals-hero__col_r">
+        <a
+          href="{{ fields.insert.url }}"
+          class="proposals-hero__insert-block insert-block insert-block_round-left-both"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="insert-block__icon-wrap">
+            <svg viewBox="0 0 26 26" class="insert-block__icon insert-block__icon_link">
+              <use xlink:href="#icon-link"></use>
+            </svg>
+          </div>
+          <div class="insert-block__inset">
+            <div class="insert-block__text insert-block__text_big">
+              {{ fields.insert.text | markdownify }}
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

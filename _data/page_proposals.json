@@ -1,7 +1,12 @@
 {
   "fields": {
     "hero": {
-      "heading": "Предложения"
+      "heading": "Предложения",
+      "text": "Идеи оформляются в&nbsp;виде github issue на&nbsp;[github.com/cpp-ru/ideas](https://github.com/cpp-ru/ideas).\n\nГолосуйте за&nbsp;предложения с&nbsp;помощью GitHub Reactions, обсуждайте идеи в&nbsp;комментариях, делитесь своими мыслями!",
+      "insert": {
+        "url": "https://github.com/cpp-ru/ideas/issues/new?template=idea_or_fix.md",
+        "text": "Поделиться идеей"
+      }
     }
   }
 }

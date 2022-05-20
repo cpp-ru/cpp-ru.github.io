@@ -1,8 +1,64 @@
+.proposals-hero {
+  margin: 0 0 70px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 100px;
+  }
+}
+
 .proposals-hero__heading {
   margin-top: 142px;
 
   @include breakpoint-lo($small-viewport) {
     max-width: 130px;
     margin-top: 47px;
+  }
+}
+
+.proposals-hero__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: -15px 0 0;
+}
+
+.proposals-hero__col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 50%;
+
+  &_l {
+    padding-right: 40px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    padding-left: 0;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
+}
+
+.proposals-hero__text {
+  font-size: 24px;
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 16px;
+  }
+}
+
+.proposals-hero__insert-block {
+  margin-top: 20px;
+
+  @include breakpoint-lo($small-viewport) {
+    margin-top: 0;
   }
 }
