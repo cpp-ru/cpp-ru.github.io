@@ -1,0 +1,66 @@
+{% assign fields = site.data.page_news.fields.achievements %}
+<div class="news-achievements">
+  <div class="news-achievements__container container">
+    <ul class="news-achievements__list">
+      {% for item in fields.list %}
+        <li class="news-achievements__list-item news-achievements__list-item_{{item.modifier}}">
+          {% if item.modifier == 'wide' %}
+            <div class="news-achievements__year-wrap news-achievements__year-wrap_{{item.yearAlignment}}">
+              <div class="news-achievements__year">
+                {{ item.year | markdownify | remove: '<p>' | remove: '</p>' }}
+              </div>
+            </div>
+            {% if item.text and item.text != "" and item.text != nil   %}
+              <div class="news-achievements__text">
+                {{ item.text | markdownify }}
+              </div>
+            {% endif %}
+            <div class="news-achievements__showcase">
+              <a
+                class="news-achievements__showcase-link"
+                href="{{'/assets/images/' | append: item.img | relative_url}}"
+                target="_blank"
+              >
+                <img
+                  class="news-achievements__showcase-pic"
+                  src="{{'/assets/images/' | append: item.img | relative_url}}"
+                  alt=""
+                />
+              </a>
+            </div>
+          {% else %}
+            <div class="news-achievements__cols">
+              <div class="news-achievements__col news-achievements__col_l">
+                <div class="news-achievements__year-wrap news-achievements__year-wrap_{{item.yearAlignment}}">
+                  <div class="news-achievements__year">
+                    {{ item.year | markdownify | remove: '<p>' | remove: '</p>' }}
+                  </div>
+                </div>
+                {% if item.text and item.text != "" and item.text != nil   %}
+                  <div class="news-achievements__text">
+                    {{ item.text | markdownify }}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="news-achievements__col news-achievements__col_r">
+                <div class="news-achievements__showcase">
+                  <a
+                    class="news-achievements__showcase-link"
+                    href="{{'/assets/images/' | append: item.img | relative_url}}"
+                    target="_blank"
+                  >
+                    <img
+                      class="news-achievements__showcase-pic"
+                      src="{{'/assets/images/' | append: item.img | relative_url}}"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

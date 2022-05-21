@@ -1,0 +1,138 @@
+.news-achievements__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-achievements__list-item {
+  margin: 0 0 60px;
+  padding: 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 40px;
+  }
+}
+
+/* Cols */
+
+.news-achievements__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.news-achievements__col {
+  width: 50%;
+
+  &_l {
+    padding-right: 10px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    padding-left: 30px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-left: 0;
+    }
+  }
+
+  .news-achievements__list-item_left & {
+    &_l {
+      padding-right: 0;
+      padding-left: 30px;
+
+      @include breakpoint-lo($small-viewport) {
+        padding-left: 0;
+      }
+    }
+    &_r {
+      order: -1;
+      padding-right: 10px;
+      padding-left: 0;
+
+      @include breakpoint-lo($small-viewport) {
+        order: 1;
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
+}
+
+/* Content */
+
+.news-achievements__year-wrap {
+  margin: 0 0 60px;
+
+  &_right {
+    text-align: right;
+
+    @include breakpoint-lo($small-viewport) {
+      text-align: left;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 0 0 20px;
+  }
+}
+
+.news-achievements__year {
+  display: inline-block;
+  min-width: 300px;
+  min-height: 60px;
+  padding: 16px 40px;
+  color: $color-text-accent;
+  font: 400 24px/1 $font-family-text;
+  text-align: center;
+  background: #fff;
+  border: solid 2px $color-brand-blue;
+  border-radius: 30px 30px 10px 30px;
+
+  .news-achievements__list-item:nth-child(odd) & {
+    border-radius: 30px 30px 30px 10px;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 32px;
+    background: transparent;
+    border: none;
+  }
+}
+
+.news-achievements__showcase-link {
+  display: block;
+  text-decoration: none;
+  border-radius: 30px;
+  overflow: hidden;
+
+  @include breakpoint-lo($small-viewport) {
+    border-radius: 10px;
+  }
+}
+
+.news-achievements__showcase-pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.news-achievements__text {
+  font-size: 24px;
+
+  @include breakpoint-lo($small-viewport) {
+    font-size: 16px;
+  }
+}

@@ -1,8 +1,32 @@
 {
   "fields": {
     "hero": {
-      "label": "2019",
       "heading": "Достижения"
+    },
+    "achievements": {
+      "list": [
+        {
+          "modifier": "wide",
+          "year": "2020",
+          "yearAlignment": "left",
+          "img": "news/infographics-2020.png",
+          "text": ""
+        },
+        {
+          "modifier": "wide",
+          "year": "2019",
+          "yearAlignment": "right",
+          "img": "news/infographics-2019.png",
+          "text": ""
+        },
+        {
+          "modifier": "right",
+          "year": "2018",
+          "yearAlignment": "left",
+          "img": "news/infographics-2018.jpeg",
+          "text": "С&nbsp;этого года, мы&nbsp;решили публиковать красивую инфографику по&nbsp;итогам работы РГ21 за&nbsp;год.\n\nИтак, наши итоги за&nbsp;2018 (картинка кликабельная) →"
+        }
+      ]
     }
   }
 }
