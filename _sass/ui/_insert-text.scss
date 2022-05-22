@@ -1,6 +1,6 @@
 .insert-text {
   position: relative;
-  padding: 36px 75px 36px 32px;
+  padding: 36px 62px 36px 32px;
   background: $color-gray-light;
   border-radius: 10px 113px 113px 10px;
 
@@ -13,7 +13,7 @@
   &_round-left {
     margin-right: -1 * $padding-side-sm;
     margin-left: 0;
-    padding: 36px 32px 36px 75px;
+    padding: 36px 32px 36px 62px;
     border-radius: 113px 10px 10px 113px;
 
     @include breakpoint-lo($small-viewport) {
@@ -97,8 +97,15 @@
   }
 
   &_big {
-    font-weight: 500;
     font-size: 18px;
+
+    a {
+      font-weight: inherit;
+    }
+  }
+
+  &_bold {
+    font-weight: 500;
   }
 
   @include breakpoint-lo($small-viewport) {

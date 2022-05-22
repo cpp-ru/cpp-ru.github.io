@@ -1,0 +1,39 @@
+{% assign fields = site.data.page_news.fields.mark %}
+<div class="news-mark">
+  <div class="news-mark__inset">
+    <div class="news-mark__container container">
+      <h2 class="news-mark__heading heading-h2">
+        {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+      </h2>
+      <div class="news-mark__cols">
+        <div class="news-mark__col news-mark__col_l">
+          <div class="news-mark__text">
+            {{ fields.text.col1 | markdownify }}
+          </div>
+        </div>
+        <div class="news-mark__col news-mark__col_r">
+          <div class="news-mark__text-bold">
+            {{ fields.text.col2 | markdownify }}
+          </div>
+
+          <div class="news-mark__insert-text insert-text insert-text_round-left">
+            <div class="insert-text__text insert-text__text_big">
+              {{ fields.insert | markdownify }}
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="news-mark__cta">
+        <a
+          href="{{ fields.cta.url }}"
+          class="home-hero__cta-button button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ fields.cta.text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

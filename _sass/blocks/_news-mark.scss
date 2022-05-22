@@ -1,0 +1,98 @@
+.news-mark__inset {
+  margin: 0 auto;
+  padding: 50px 0 100px;
+  background: #fff;
+  border-radius: 50px 50px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 40px 0 60px;
+    border-radius: 20px;
+  }
+}
+
+.news-mark__heading {
+  max-width: 740px;
+
+  @include breakpoint-lo($small-viewport) {
+    max-width: 410px;
+  }
+}
+
+/* Cols */
+
+.news-mark__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: -15px 0 0;
+}
+
+.news-mark__col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 50%;
+
+  &_l {
+    max-width: 550px;
+    padding-right: 50px;
+
+    @include breakpoint-lo($small-viewport) {
+      max-width: none;
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    padding-left: 30px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-left: 0;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
+}
+
+/* Text */
+
+.news-mark__text-bold {
+  max-width: 490px;
+
+  @include breakpoint-lo($small-viewport) {
+    max-width: none;
+    margin: -1em 0 0;
+    font-weight: 500;
+  }
+}
+
+/* Blocks */
+
+.news-mark__insert-text {
+  margin-bottom: 1em;
+  margin-left: -62px;
+
+  .insert-text__text {
+    max-width: 340px;
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+
+/* CTA */
+
+.news-mark__cta {
+  margin: 50px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    margin: 40px 0 0;
+  }
+}
