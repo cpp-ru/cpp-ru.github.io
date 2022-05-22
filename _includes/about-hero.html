@@ -4,5 +4,19 @@
     <h1 class="about-hero__heading heading-h1">
       {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
     </h1>
+    <div class="about-hero__cols">
+      <div class="about-hero__col about-hero__col_l">
+        <div class="about-hero__text">
+          {{ fields.text | markdownify }}
+        </div>
+      </div>
+      <div class="about-hero__col about-hero__col_r">
+        <img
+          class="about-hero__logo"
+          src="{{'/assets/images/' | append: fields.img | relative_url}}"
+          alt="{{ fields.alt }}"
+        />
+      </div>
+    </div>
   </div>
 </div>

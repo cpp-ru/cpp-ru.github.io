@@ -1,7 +1,10 @@
 {
   "fields": {
     "hero": {
-      "heading": "About __the Project__"
+      "heading": "About __the Project__",
+      "text": "An&nbsp;international effort is&nbsp;underway to&nbsp;standardise and refine the C++&nbsp;language, coordinated by&nbsp;the C++&nbsp;Working Group of&nbsp;the International Organization for Standardization.\n\nRussian developers have a&nbsp;voice in&nbsp;the improvement of&nbsp;the standard through Working Group&nbsp;21 (C++&nbsp;language) Russia.\n\nWG21&nbsp;C++ Russia was created on&nbsp;28&nbsp;March 2016, as&nbsp;part of&nbsp;a&nbsp;subcommittee on&nbsp;&laquo;Programming languages, their environments and system software interfaces&raquo; within Rosstandart Technical Committee&nbsp;22 (GOST&nbsp;R).",
+      "img": "logo-stdcpp-en.svg",
+      "alt": "WG21 C++ Russia"
     }
   }
 }

@@ -1,7 +1,64 @@
+.about-hero {
+  margin: 0 0 60px;
+}
+
 .about-hero__heading {
   margin-top: 142px;
 
   @include breakpoint-lo($small-viewport) {
     margin-top: 47px;
+  }
+}
+
+.about-hero__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: -15px 0 0;
+}
+
+.about-hero__col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 50%;
+
+  &_l {
+    padding-right: 10px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    padding-left: 30px;
+
+    @include breakpoint-lo($small-viewport) {
+      order: -1;
+      padding-top: 25px;
+      padding-left: 0;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
+}
+
+.about-hero__logo {
+  display: block;
+  max-width: 350px;
+  margin: 10px auto 0;
+
+  @include breakpoint-lo($small-viewport) {
+    max-width: 250px;
+    margin: 0 0 20px;
+  }
+
+  @include breakpoint-lo($smaller-viewport) {
+    max-width: 200px;
   }
 }
