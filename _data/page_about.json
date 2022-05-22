@@ -5,6 +5,13 @@
       "text": "An&nbsp;international effort is&nbsp;underway to&nbsp;standardise and refine the C++&nbsp;language, coordinated by&nbsp;the C++&nbsp;Working Group of&nbsp;the International Organization for Standardization.\n\nRussian developers have a&nbsp;voice in&nbsp;the improvement of&nbsp;the standard through Working Group&nbsp;21 (C++&nbsp;language) Russia.\n\nWG21&nbsp;C++ Russia was created on&nbsp;28&nbsp;March 2016, as&nbsp;part of&nbsp;a&nbsp;subcommittee on&nbsp;&laquo;Programming languages, their environments and system software interfaces&raquo; within Rosstandart Technical Committee&nbsp;22 (GOST&nbsp;R).",
       "img": "logo-stdcpp-en.svg",
       "alt": "WG21 C++ Russia"
+    },
+    "goals": {
+      "heading": "Goals __and objectives__",
+      "text": {
+        "col1": "WG21&nbsp;C++ Russia serves as&nbsp;an&nbsp;expert body on&nbsp;standardisation of&nbsp;C++. Its&nbsp;goal is&nbsp;to&nbsp;collect, organise and prepare proposals on&nbsp;standardisation of&nbsp;the&nbsp;C++ language initiated by&nbsp;Russian developers, and advocate these proposals at&nbsp;general meetings of&nbsp;the C++&nbsp;Working Group of&nbsp;the International Organization for Standardization.",
+        "col2": "WG21&nbsp;C++ Russia members manage incoming ideas for proposals; discuss, write and refine proposals for the standard; advise developers writing proposals independently; and give presentations at&nbsp;open meetings of&nbsp;WG21&nbsp;C++ Russia and the C++&nbsp;community."
+      }
     }
   }
 }

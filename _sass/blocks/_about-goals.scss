@@ -1,0 +1,60 @@
+.about-goals__inset {
+  margin: 0 auto;
+  padding: 50px 0 80px;
+  background: #fff;
+  border-radius: 50px 50px 0 0;
+
+  @include breakpoint-lo($small-viewport) {
+    padding: 40px 0;
+    border-radius: 20px;
+  }
+}
+
+/* Cols */
+
+.about-goals__cols {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: -15px 0 0;
+}
+
+.about-goals__col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 50%;
+
+  &_l {
+    padding-right: 10px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-right: 0;
+    }
+  }
+
+  &_r {
+    padding-left: 30px;
+
+    @include breakpoint-lo($small-viewport) {
+      padding-left: 0;
+    }
+  }
+
+  @include breakpoint-lo($small-viewport) {
+    width: 100%;
+  }
+}
+
+/* Text */
+
+.about-goals__text_2 {
+  max-width: 490px;
+
+  @include breakpoint-lo($small-viewport) {
+    max-width: none;
+    margin: -1em 0 0;
+  }
+}
