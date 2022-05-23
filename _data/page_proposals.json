@@ -7,6 +7,37 @@
         "url": "https://github.com/cpp-ru/ideas/issues/new?template=idea_or_fix.md",
         "text": "Поделиться идеей"
       }
+    },
+    "viewer": {
+      "heading": "Идеи других пользователей",
+      "filterToggleLabel": "Фильтр",
+      "filter": [
+        {
+          "label": "Открытые",
+          "value": "&state=open&labels="
+        },
+        {
+          "label": "Решённые",
+          "value": "&state=closed"
+        },
+        {
+          "label": "Решённые в&nbsp;РГ21",
+          "value": "&state=closed&labels=Сделано%20в%20РГ21"
+        },
+        {
+          "label": "В&nbsp;работе",
+          "value": "&state=open&labels=В%20работе",
+          "checked": true
+        },
+        {
+          "label": "На&nbsp;паузе",
+          "value": "&state=open&labels=На%20паузе"
+        },
+        {
+          "label": "Вce",
+          "value": "&state=all"
+        }
+      ]
     }
   }
 }

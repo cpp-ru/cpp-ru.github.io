@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% endif %}
   <link rel="stylesheet" href="{{'/assets/css/styles.css' | append: '?v=' | append: site.time | relative_url}}">
+  <script type="application/javascript" src="{{'/vendors/jquery-3.6.0.min.js' | relative_url}}"></script>
+  <script type="application/javascript" src="{{'/vendors/showdown.min.js' | relative_url}}"></script>
+  <link rel="stylesheet" href="{{'/vendors/highlight/github.min.css' | relative_url}}">
+  <script type="application/javascript" src="{{'/vendors/highlight/highlight.min.js' | relative_url}}"></script>
 </head>
 <body>
 {% include svg-defs.html %}

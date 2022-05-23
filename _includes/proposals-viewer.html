@@ -1,0 +1,38 @@
+{% assign fields = site.data.page_proposals.fields.viewer %}
+<script type="application/javascript" src="{{'/assets/js/proposals.js' | append: '?v=' | append: site.time | relative_url}}"></script>
+<div class="proposals-viewer">
+  <div class="proposals-viewer__container container">
+    <h2 class="proposals-viewer__heading heading-h2">
+      {{ fields.heading | markdownify | remove: '<p>' | remove: '</p>' }}
+    </h2>
+
+    <div class="proposals-viewer__filter-wrap">
+
+      <input class="proposals-viewer__filter-active-checkbox" type="checkbox" id="stateCheckbox" />
+      <div class="proposals-viewer__filter-active">
+        <label class="proposals-viewer__filter-active-label" for="stateCheckbox">
+          <span class="proposals-viewer__filter-active-button">{{ filterToggleLabel }}</span>
+        </label>
+      </div>
+
+      <div class="proposals-viewer__filter">
+        {% for item in fields.filter %}
+          <div class="proposals-viewer__filter-item">
+            <label class="proposals-viewer__filter-label">
+              <input class="proposals-viewer__filter-radio" type="radio" name="stateRadios" value="{{ item.value }}" onclick="proposalsFilter();" {% if item.checked == true %}checked{% endif %} />
+              <span class="proposals-viewer__filter-button">{{ item.label | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="proposals-viewer__inset">
+    <div class="proposals-viewer__container container">
+      <div class="proposals-viewer__content" id='proposalsContent'>
+      </div>
+    </div>
+  </div>
+</div>

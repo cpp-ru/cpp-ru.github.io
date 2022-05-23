@@ -73,3 +73,7 @@ input::-ms-clear {
   display: none;
 }
 
+.hljs {
+  background: $color-gray-light-2 !important;
+  border-radius: 6px;
+}
