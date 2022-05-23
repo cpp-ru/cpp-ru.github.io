@@ -21,7 +21,7 @@
 /* Filter */
 
 .proposals-viewer__filter-wrap {
-  margin: 0 0 -80px;
+  margin: 0 0 -67px;
 
   @include breakpoint-lo($small-viewport) {
     margin: 0;
@@ -195,7 +195,7 @@
 /* Content */
 
 .proposals-viewer__content {
-  margin: 18px 0 0;
+  margin: 10px 0 0;
   opacity: 1;
   transition: opacity 0.3s;
 
