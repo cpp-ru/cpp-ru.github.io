@@ -17,7 +17,7 @@ function proposalsDraw(query) {
 
       proposals.append(
         '<div class="proposals-viewer__idea">'
-        + '<h3 class="proposals-viewer__idea-title"><a href="' + x.html_url + '">' + x.title + '</a></h3>'
+        + '<h3 class="proposals-viewer__idea-title"><a href="' + x.html_url + '" target="_blank" rel="noopener noreferrer">' + x.title + '</a></h3>'
         + '<p class="proposals-viewer__idea-lead">' + MARKDOWN_CONVERTER.makeHtml(preview) + '</p>'
         + '</div>'
       );
