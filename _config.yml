@@ -24,9 +24,9 @@ keywords:
 thumbnail: social-share.png
 thumbnailVK: social-share-vk.png
 thumbnailTw: social-share-tw.png
-# domain: stdcpp.ru
-baseurl: /stdcpp-v2.github.io # the subpath of your site, e.g. /blog
-url: "https://spirik.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+domain: stdcpp.ru
+baseurl: / # the subpath of your site, e.g. /blog
+url: "https://stdcpp.ru" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 # theme: minima
