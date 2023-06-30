@@ -4,7 +4,7 @@
       "label": "РГ21 С++ Россия",
       "heading": "Национальная рабочая группа __по&nbsp;стандар&shy;тизации С++__",
       "cta": {
-        "url": "https://github.com/cpp-ru/cpp-ru.github.io/issues/new",
+        "url": "https://github.com/cpp-ru/ideas/issues/new?template=idea_or_fix.md",
         "text": "Подать идею"
       },
       "goals": [
