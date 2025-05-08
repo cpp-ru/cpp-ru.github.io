@@ -111,7 +111,7 @@
     },
     "examples": {
       "heading": "__Быстрый старт и&nbsp;готовые примеры__",
-      "text": "Пример proposal в&nbsp;формате HTML&nbsp;с автоматической подсветкой подсветкой синтаксиса C++: [Stacktrace Library](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p0881r6.html).\n\n__Открывайте текстовым редактором, убирайте лишнее и&nbsp;дописывайте своё :)__",
+      "text": "Пример proposal в&nbsp;формате HTML&nbsp;с автоматической подсветкой синтаксиса C++: [Stacktrace Library](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2020/p0881r6.html).\n\n__Открывайте текстовым редактором, убирайте лишнее и&nbsp;дописывайте своё :)__",
       "insert": {
         "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2021/",
         "text": "Другие примеры предложений всегда можно найти на&nbsp;сайте __open-std.org__. Вам нужны документы с&nbsp;номерами вида P????R0."
