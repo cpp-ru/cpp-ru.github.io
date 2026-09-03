@@ -2,6 +2,9 @@
 
 set -e
 
+echo "Issues before: $(jq length all_issues.json)"
+echo "Comments before: $(jq length all_comments.json)"
+
 for I in {1..15}; do
     HTTP_STATUS=$(curl ${TOKEN:+"-u ${TOKEN}"} -f -w "%{http_code}" -o issues_${I}.txt "https://api.github.com/repos/cpp-ru/ideas/issues?state=all&per_page=100&page=${I}" -H "Accept: application/vnd.github.squirrel-girl-preview")
     if [ ${HTTP_STATUS} -ne 200 ]; then exit -1; fi
